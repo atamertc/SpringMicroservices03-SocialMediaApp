@@ -1,0 +1,56 @@
+server:
+  port: 9090
+
+spring:
+  security:
+    user:
+      name: atamertc
+      password: 123
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: user
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: auth-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/sma_authservice
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+feign:
+  url: http://localhost:9091
+
+jwt:
+  secretKey: ${ssa_secretkey}
+  issuer: ${ssa_issuer}
+  audience: ${ssa_audience}
+
+rabbitmq:
+  #EXCHANGE
+  auth-exchange: authExchange
+  #PRODUCER
+  register-bindingKey: registerBindingKey
+  register-queue: registerQueue
+  activate-bindingKey: activateBindingKey
+  activate-queue: activateQueue
+  mail-bindingKey: mailBindingKey
+  mail-queue: mailQueue
+  #CONSUMER
+  #---------
+
+#logging:
+#  level:
+#    root: info
+#  file:
+#    name: authservice.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 1MB #1mb asilirsa sikistirip yeni dosya olusturacak

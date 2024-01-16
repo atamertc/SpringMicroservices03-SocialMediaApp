@@ -1,0 +1,144 @@
+2023-11-22 02:31:59.071  INFO [auth-service,,] 17824 --- [main] com.atamertc.AuthServiceApplication      : Starting AuthServiceApplication using Java 19.0.2 on Atamert-PC with PID 17824 (D:\BilgeAdamBoost\spring-projects\SocialMediaApp\auth-service\build\classes\java\main started by Atamert in D:\BilgeAdamBoost\spring-projects\SocialMediaApp)
+2023-11-22 02:31:59.074  INFO [auth-service,,] 17824 --- [main] com.atamertc.AuthServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-22 02:31:59.120  INFO [auth-service,,] 17824 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2023-11-22 02:31:59.120  INFO [auth-service,,] 17824 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service-application, profiles=[default], label=null, version=null, state=null
+2023-11-22 02:31:59.937  INFO [auth-service,,] 17824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-22 02:31:59.939  INFO [auth-service,,] 17824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-22 02:32:00.074  INFO [auth-service,,] 17824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 1 JPA repository interfaces.
+2023-11-22 02:32:00.087  INFO [auth-service,,] 17824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-22 02:32:00.089  INFO [auth-service,,] 17824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-22 02:32:00.105  INFO [auth-service,,] 17824 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.atamertc.repository.AuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-22 02:32:00.106  INFO [auth-service,,] 17824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-11-22 02:32:00.309  INFO [auth-service,,] 17824 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9069222c-0707-3a5e-ade1-23fe435c72f1
+2023-11-22 02:32:01.049  INFO [auth-service,,] 17824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-11-22 02:32:01.057  INFO [auth-service,,] 17824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-22 02:32:01.058  INFO [auth-service,,] 17824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-11-22 02:32:01.322  INFO [auth-service,,] 17824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-22 02:32:01.322  INFO [auth-service,,] 17824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2200 ms
+2023-11-22 02:32:01.634  WARN [auth-service,,] 17824 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2023-11-22 02:32:01.892  INFO [auth-service,,] 17824 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-22 02:32:01.950  INFO [auth-service,,] 17824 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-22 02:32:02.117  INFO [auth-service,,] 17824 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-22 02:32:02.220  INFO [auth-service,,] 17824 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-22 02:32:02.484  INFO [auth-service,,] 17824 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-22 02:32:02.528  INFO [auth-service,,] 17824 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-22 02:32:03.220  INFO [auth-service,,] 17824 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-22 02:32:03.230  INFO [auth-service,,] 17824 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22 02:32:03.845  WARN [auth-service,,] 17824 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-22 02:32:05.518  INFO [auth-service,,] 17824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-11-22 02:32:05.562  INFO [auth-service,,] 17824 --- [main] com.atamertc.AuthServiceApplication      : Started AuthServiceApplication in 7.364 seconds (JVM running for 8.062)
+2023-11-22 02:32:38.968  INFO [auth-service,ff384d7bd966afc0,ff384d7bd966afc0] 17824 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-22 02:32:38.968  INFO [auth-service,ff384d7bd966afc0,ff384d7bd966afc0] 17824 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-22 02:32:38.970  INFO [auth-service,ff384d7bd966afc0,ff384d7bd966afc0] 17824 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-22 02:32:39.237  INFO [auth-service,030700c2c720ab53,030700c2c720ab53] 17824 --- [http-nio-9090-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 166 ms
+2023-11-22 02:32:40.053  WARN [auth-service,,] 17824 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2023-11-22 02:32:40.056  WARN [auth-service,,] 17824 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:67) ~[spring-cloud-sleuth-zipkin-3.1.8.jar:3.1.8]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:666) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51) ~[spring-cloud-sleuth-zipkin-3.1.8.jar:3.1.8]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44) ~[spring-cloud-sleuth-zipkin-3.1.8.jar:3.1.8]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137) ~[spring-cloud-sleuth-zipkin-3.1.8.jar:3.1.8]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150) ~[spring-cloud-sleuth-zipkin-3.1.8.jar:3.1.8]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140) ~[spring-cloud-sleuth-zipkin-3.1.8.jar:3.1.8]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.2.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.3.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:535) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:279) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:384) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:406) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782) ~[spring-web-5.3.27.jar:5.3.27]
+	... 11 common frames omitted
+
+2023-11-22 02:32:52.339  INFO [auth-service,d7bbb28b759c8457,d7bbb28b759c8457] 17824 --- [http-nio-9090-exec-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2023-11-22 02:32:52.376  INFO [auth-service,d7bbb28b759c8457,d7bbb28b759c8457] 17824 --- [http-nio-9090-exec-3] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#68596992:0/SimpleConnection@1bb1d5a4 [delegate=amqp://user@127.0.0.1:5672/, localPort= 60893]
+2023-11-22 02:32:53.922 ERROR [auth-service,1f77682f4a0ba955,1f77682f4a0ba955] 17824 --- [http-nio-9090-exec-5] c.a.exception.GlobalExceptionHandler     : Hata olustu: Bu kullanici adina sahip bir kullanici mevcut.
+2023-11-22 02:35:44.086  INFO [auth-service,,] 17824 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-11-22 02:35:44.118  INFO [auth-service,,] 17824 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22 02:35:44.120  INFO [auth-service,,] 17824 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-22 02:35:44.122  INFO [auth-service,,] 17824 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-22 12:17:04.948  INFO [auth-service,,] 7676 --- [main] com.atamertc.AuthServiceApplication      : Starting AuthServiceApplication using Java 19.0.2 on Atamert-PC with PID 7676 (D:\BilgeAdamBoost\spring-projects\SocialMediaApp\auth-service\build\classes\java\main started by Atamert in D:\BilgeAdamBoost\spring-projects\SocialMediaApp)
+2023-11-22 12:17:04.951  INFO [auth-service,,] 7676 --- [main] com.atamertc.AuthServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-22 12:17:04.994  INFO [auth-service,,] 7676 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2023-11-22 12:17:04.994  INFO [auth-service,,] 7676 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service-application, profiles=[default], label=null, version=null, state=null
+2023-11-22 12:17:05.809  INFO [auth-service,,] 7676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-22 12:17:05.811  INFO [auth-service,,] 7676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-22 12:17:05.951  INFO [auth-service,,] 7676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 1 JPA repository interfaces.
+2023-11-22 12:17:05.961  INFO [auth-service,,] 7676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-22 12:17:05.962  INFO [auth-service,,] 7676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-22 12:17:05.974  INFO [auth-service,,] 7676 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.atamertc.repository.AuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-22 12:17:05.975  INFO [auth-service,,] 7676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2023-11-22 12:17:06.165  INFO [auth-service,,] 7676 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9069222c-0707-3a5e-ade1-23fe435c72f1
+2023-11-22 12:17:06.903  INFO [auth-service,,] 7676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-11-22 12:17:06.914  INFO [auth-service,,] 7676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-22 12:17:06.914  INFO [auth-service,,] 7676 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-11-22 12:17:07.138  INFO [auth-service,,] 7676 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-22 12:17:07.138  INFO [auth-service,,] 7676 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2142 ms
+2023-11-22 12:17:07.465  WARN [auth-service,,] 7676 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2023-11-22 12:17:07.680  INFO [auth-service,,] 7676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-22 12:17:07.729  INFO [auth-service,,] 7676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-22 12:17:07.900  INFO [auth-service,,] 7676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-22 12:17:08.004  INFO [auth-service,,] 7676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-22 12:17:08.188  INFO [auth-service,,] 7676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-22 12:17:08.221  INFO [auth-service,,] 7676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-22 12:17:08.921  INFO [auth-service,,] 7676 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-22 12:17:08.931  INFO [auth-service,,] 7676 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22 12:17:09.502  WARN [auth-service,,] 7676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-22 12:17:11.134  INFO [auth-service,,] 7676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-11-22 12:17:11.192  INFO [auth-service,,] 7676 --- [main] com.atamertc.AuthServiceApplication      : Started AuthServiceApplication in 7.042 seconds (JVM running for 7.798)
+2023-11-22 12:17:40.550  INFO [auth-service,,] 7676 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-11-22 12:17:40.575  INFO [auth-service,,] 7676 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22 12:17:40.576  INFO [auth-service,,] 7676 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-22 12:17:40.578  INFO [auth-service,,] 7676 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-22 12:17:45.579  INFO [auth-service,,] 19748 --- [main] com.atamertc.AuthServiceApplication      : Starting AuthServiceApplication using Java 19.0.2 on Atamert-PC with PID 19748 (D:\BilgeAdamBoost\spring-projects\SocialMediaApp\auth-service\build\classes\java\main started by Atamert in D:\BilgeAdamBoost\spring-projects\SocialMediaApp)
+2023-11-22 12:17:45.581  INFO [auth-service,,] 19748 --- [main] com.atamertc.AuthServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-22 12:17:45.620  INFO [auth-service,,] 19748 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2023-11-22 12:17:45.620  INFO [auth-service,,] 19748 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service-application, profiles=[default], label=null, version=null, state=null
+2023-11-22 12:17:46.310  INFO [auth-service,,] 19748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-22 12:17:46.311  INFO [auth-service,,] 19748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-22 12:17:46.418  INFO [auth-service,,] 19748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interfaces.
+2023-11-22 12:17:46.428  INFO [auth-service,,] 19748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-22 12:17:46.429  INFO [auth-service,,] 19748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-22 12:17:46.440  INFO [auth-service,,] 19748 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.atamertc.repository.AuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-22 12:17:46.440  INFO [auth-service,,] 19748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2023-11-22 12:17:46.607  INFO [auth-service,,] 19748 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9069222c-0707-3a5e-ade1-23fe435c72f1
+2023-11-22 12:17:47.138  INFO [auth-service,,] 19748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-11-22 12:17:47.145  INFO [auth-service,,] 19748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-22 12:17:47.145  INFO [auth-service,,] 19748 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-11-22 12:17:47.307  INFO [auth-service,,] 19748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-22 12:17:47.307  INFO [auth-service,,] 19748 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1685 ms
+2023-11-22 12:17:47.543  WARN [auth-service,,] 19748 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2023-11-22 12:17:47.727  INFO [auth-service,,] 19748 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-22 12:17:47.766  INFO [auth-service,,] 19748 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-22 12:17:47.888  INFO [auth-service,,] 19748 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-22 12:17:47.960  INFO [auth-service,,] 19748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-22 12:17:48.081  INFO [auth-service,,] 19748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-22 12:17:48.106  INFO [auth-service,,] 19748 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-22 12:17:48.635  INFO [auth-service,,] 19748 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-22 12:17:48.644  INFO [auth-service,,] 19748 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22 12:17:49.101  WARN [auth-service,,] 19748 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-22 12:17:50.663  INFO [auth-service,,] 19748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-11-22 12:17:50.724  INFO [auth-service,,] 19748 --- [main] com.atamertc.AuthServiceApplication      : Started AuthServiceApplication in 5.862 seconds (JVM running for 6.674)
+2023-11-22 12:17:54.298  INFO [auth-service,,] 19748 --- [Thread-2] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2023-11-22 12:17:54.324  INFO [auth-service,,] 19748 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22 12:17:54.325  INFO [auth-service,,] 19748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-22 12:17:54.327  INFO [auth-service,,] 19748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,82 @@
+plugins {
+    /**
+     * Buraya yazılan özellikler tüm diğer servislerde etkili olacak.
+     * Diğerlerinde hiç yazmasak bile geçerli olacak bunlar.
+     */
+    id 'java'
+    id 'org.springframework.boot' version '2.7.12'
+    id 'io.spring.dependency-management' version "1.0.15.RELEASE"
+    id 'application'
+}
+
+allprojects {
+    /**
+     * Tüm projelere(root+sub) pluginleri atamak için:
+     */
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java-library'
+    apply plugin: 'application'
+    apply from: "${rootDir}/dependencies.gradle"
+}
+
+subprojects {
+    /**
+     * Alt projelerimde group ve version adı ile diğer özelliklerin aynı olması için:
+     */
+    group = 'com.atamertc'
+    version = 'v.0.0.1'
+    sourceCompatibility = JavaVersion.VERSION_19
+    targetCompatibility = JavaVersion.VERSION_19
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    buildscript {
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:${versions.springBoot}")
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+    }
+    buildscript {
+        repositories {
+            mavenCentral()
+        }
+    }
+    dependencies {
+        implementation libs.lombok
+        annotationProcessor libs.lombok
+        implementation libs.mapStruct
+        annotationProcessor libs.mapStructProcessor
+        implementation libs.openApi
+        implementation libs.javaJwt
+
+        implementation libs.springBootWeb
+        implementation libs.springBootValidation
+        implementation libs.springBootRabbitMq
+        implementation libs.springBootDataRedis
+
+        implementation libs.springCloudOpenFeign
+        implementation libs.springCloudZipkin
+        implementation libs.springCloudSleuth
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+
+
+
+

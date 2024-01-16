@@ -1,0 +1,14 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: git-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${sma_git_config_url}
+          default-label: main
+          skip-ssl-validation: true
+          username: atamertc
+          password: ${sma_git_config_token}
