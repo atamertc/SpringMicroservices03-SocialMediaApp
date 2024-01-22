@@ -1,4 +1,7 @@
 dependencies {
     implementation libs.springBootElasticSearch
     implementation libs.springCloudConfigClient
+    implementation libs.graphqlStarter
+    implementation libs.graphqlJavaTools
+    implementation libs.graphiql
 }

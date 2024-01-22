@@ -2,6 +2,7 @@ package com.atamertc.mapper;
 
 
 import com.atamertc.dto.response.UserResponseDto;
+import com.atamertc.graphql.model.UserInput;
 import com.atamertc.rabbitmq.model.ElasticUserSaveModel;
 import com.atamertc.repository.entity.User;
 import org.mapstruct.Mapper;
@@ -16,6 +17,8 @@ public interface UserMapper {
     User toUser(final UserResponseDto dto);
 
     User toUser(final ElasticUserSaveModel model);
+
+    User toUser(final UserInput userInput);
 
 
 }

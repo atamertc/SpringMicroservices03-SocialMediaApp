@@ -8,12 +8,15 @@ import com.atamertc.mapper.UserMapper;
 import com.atamertc.rabbitmq.model.ElasticUserSaveModel;
 import com.atamertc.repository.UserRepository;
 import com.atamertc.repository.entity.User;
+import com.atamertc.repository.enums.EStatus;
 import com.atamertc.utility.ServiceManager;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Optional;
 
 @Service
 public class UserService extends ServiceManager<User, String> {
@@ -83,5 +86,25 @@ public class UserService extends ServiceManager<User, String> {
         Sort sort = Sort.by(Sort.Direction.fromString(direction), sortParameter);
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
         return repository.findAll(pageable);
+    }
+
+    public List<User> findAllContainingEmail(String value) {
+        return repository.findAllByEmailContainingIgnoreCase(value);
+    }
+
+    public List<User> findAllByStatus(String status) {
+        return repository.findAllByStatus(EStatus.valueOf(status.toUpperCase(Locale.ENGLISH)));
+    }
+
+    public List<User> findAllByStatusOrAddress(String status, String address) {
+        return repository.findAllByStatusOrAddress(EStatus.valueOf(status.toUpperCase(Locale.ENGLISH)), address);
+    }
+
+    public User findByUsername(String username) {
+        Optional<User> user = repository.findByUsername(username);
+        if (user.isEmpty()) {
+            throw new ElasticManagerException(ErrorType.USER_NOT_FOUND);
+        }
+        return user.get();
     }
 }
